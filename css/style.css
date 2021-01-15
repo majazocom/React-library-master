@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
+
+body {
+    margin: 0;
+}
+
+.library {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.books {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.book {
+    width: 14rem;
+    height: 18rem;
+    background: blueviolet;
+    border-radius: 2px;
+    position: relative;
+    transition: all .2s ease;
+}
+
+.book:hover {
+    cursor: pointer;
+    filter: brightness(1.05);
+}
+
+.book section {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 2px;
+}
+
+.book .bg {
+    background: linear-gradient(36deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    border-radius: inherit;
+}
+
+.book .content {
+    display: flex;
+    border-radius: inherit;
+}
+
+.content aside {
+    width: .4rem;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%);
+    margin: 0 0 0 .8rem;
+    position: relative;
+}
+
+.content .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.content .about > h2 {
+    margin: 0 0 0 1.7rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.content .about > h3 {
+    margin: 0.25rem 0 0.5rem 1.7rem;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.background-dark {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-info {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-template-areas: "header header"
+                         "display info"
+}
+
+.book-info header {
+    grid-area: header;
+    height: 3rem;
+    padding: 1rem;
+}
+
+.display {
+    grid-area: display;
+}
+
+.display .book {
+    width: 24rem;
+    height: 28rem;
+}
+
+.display .about > h2 {
+    font-size: 2.2rem;
+    margin: 0 0 0 3rem;
+}
+
+.display .about > h3 {
+    font-size: 1.2rem;
+    margin: 0.25rem 0 1.5rem 3rem
+}
+
+.info {
+    grid-area: info;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.info h1 {
+    font-size: 2.6rem;
+    margin: 0;
+}
+
+.info h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(255,255,255,.8);
+    margin: .4rem 0 0 0;
+}
+
+.info p {
+    color: rgba(255,255,255,.8);
+    padding: .4rem 0;
+    line-height: 1.5;
+}
+
+.info footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    background: rgba(255,255,255,.05);
+    border-radius: 2px;
+    margin: auto 0 0 0;
+}
+
+.info footer p {
+    margin: 0;
+}
+
+.back {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255,255,255,.2);
+    color: rgba(0,0,0,0.8);
+    text-decoration: none;
+    border-radius: 999rem;
+}
